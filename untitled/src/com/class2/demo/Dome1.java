@@ -7,6 +7,7 @@ public class Dome1 {
 	 *1.买牌
 	 *2.洗牌
 	 * 3.发牌
+	 * 4.看牌
 	 * */
 	public static void main(String [] args)
 	{
@@ -60,8 +61,23 @@ public class Dome1 {
 				hinna.add(pokerNum);
 			}
 		}
-		System.out.println("saber:"+saber);
-		System.out.println("Yuuka:"+Yukka);
-		System.out.println("hina:"+hinna);
+		System.out.println("saber:"+printpoker(saber,poker));
+		System.out.println("Yuuka:"+printpoker(Yukka,poker));
+		System.out.println("hina:"+printpoker(hinna,poker));
+		System.out.println("save:"+printpoker(save,poker));
+		//查看具体的牌
+		System.out.println("========================");
+	}
+	public static String printpoker(List<Integer> numbers,Map<Integer,String> pokers){
+
+		Collections.sort(numbers);
+		StringBuilder s1 =new StringBuilder();
+		for (Integer num:numbers)
+		{
+			String poker =pokers.get(num);
+			s1.append(poker+" ");
+		}
+		String str = s1.toString();
+		return str.trim();
 	}
 }
