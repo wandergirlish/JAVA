@@ -1,6 +1,6 @@
 =========================io 流=============================
    		1.什么是io流 :
-		          1.IO 流概述 : i 即输入 o输出 io流				指的是数据像水流一样输入输出
+		          1.IO 流概述 : i 即输入 o输出 io流指的是数据像水流一样输入输出
 			  按数据流向分：1.输入流 
 			 		2.输出流
 			  按操作方式分：1.字节流
@@ -20,7 +20,7 @@
                                         2.输出流
                           按操作方式分：1.字节流
                                         2.字符流
-		File 类 
+		3.File 类 
 		构造方法 File (String pathname)
 		 	 File(parent String child)
 		 	 File (parent String child)
@@ -28,4 +28,36 @@
 			mkdir() 和mkdirs();
 			isFile():判断File是否为文件
 			exists():判断File对象是否存在
+			getAbsolutePath()：
+		
 
+		字符流读写数据：
+			 #单个数据读
+
+			 a)创建字符流读写对象
+			 Reader(抽象类) => FileReader(子类实现)
+			 Reader  => BufferedFileReader(子类实现 高效)
+			 b)调用方法读取数据
+			 #int data = reader.read(); #读取一个字符 返回该字符代表的整数 若达到末尾则返回-1
+			 #定义数组 字符串 存储文件信息 
+
+			 c)异常抛出
+			 try{
+			    //检查
+			    //throw抛出异常
+			 }
+			 catch()
+			 {
+		 	 	//捕获
+			 }
+			 # 单个字符写
+
+			  a)创建字符流读写对象
+			  Writer(抽象类) => FileWriter(子类实现)
+			  Writer(抽象类) => BufferedFileWriter(子类实现)
+			 b) 调用方法
+			 
+			  
+
+                      
+                         
